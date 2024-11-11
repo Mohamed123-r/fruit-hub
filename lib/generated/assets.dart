@@ -5,6 +5,10 @@ class Assets {
   static const String imagesAppIcon = 'assets/images/app_icon.png';
   static const String imagesCircles = 'assets/images/circles.svg';
   static const String imagesLogo = 'assets/images/Logo.svg';
+  static const String imagesPageViewItem1BackgroundImage = 'assets/images/PageViewItem1BackgroundImage.svg';
+  static const String imagesPageViewItem1Image = 'assets/images/PageViewItem1Image.svg';
+  static const String imagesPageViewItem2BackgroundImage = 'assets/images/PageViewItem2BackgroundImage.svg';
+  static const String imagesPageViewItem2Image = 'assets/images/PageViewItem2Image.svg';
   static const String imagesPlant = 'assets/images/Plant.svg';
 
 }
