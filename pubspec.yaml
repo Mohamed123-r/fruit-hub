@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   icons_launcher: ^3.0.0
   flutter_svg: ^2.0.14
+  flutter_localizations:
+    sdk: flutter
 
 
 icons_launcher:
@@ -101,4 +103,5 @@ flutter:
   # see https://flutter.dev/to/font-from-package
   assets:
     - assets/images/
-
+flutter_intl:
+  enabled: true
