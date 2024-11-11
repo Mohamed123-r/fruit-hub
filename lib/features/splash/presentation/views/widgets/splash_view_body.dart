@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_hub/core/helper_funcation/is_arabic.dart';
 import 'package:fruit_hub/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:fruit_hub/generated/assets.dart';
 
@@ -29,6 +30,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Row(
+          mainAxisAlignment:
+              isArabic() ? MainAxisAlignment.end : MainAxisAlignment.start,
           children: [
             SvgPicture.asset(Assets.imagesPlant),
           ],
