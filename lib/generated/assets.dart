@@ -3,5 +3,8 @@ class Assets {
   Assets._();
 
   static const String imagesAppIcon = 'assets/images/app_icon.png';
+  static const String imagesCircles = 'assets/images/circles.svg';
+  static const String imagesLogo = 'assets/images/Logo.svg';
+  static const String imagesPlant = 'assets/images/Plant.svg';
 
 }
