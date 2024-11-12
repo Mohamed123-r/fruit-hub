@@ -6,6 +6,7 @@ import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/auth/presentation/views/log_in_view.dart';
 import 'package:fruit_hub/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});
@@ -63,11 +64,12 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
             : Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: CustomButton(
-                  title: 'ابدأ الان',
+                  title: S.of(context).get_started,
                   onPressed: () {
                     Navigator.of(context)
                         .pushReplacementNamed(LogInView.routeName);
-                    CacheHelper().saveData(key: isOnboardingViewSeen, value: true);
+                    CacheHelper()
+                        .saveData(key: isOnboardingViewSeen, value: true);
                   },
                 ),
               ),

@@ -22,7 +22,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   void executeNavigation() {
-    bool isLogin = CacheHelper().getData(key: isOnboardingViewSeen);
+    bool isLogin = CacheHelper().getData(key: isOnboardingViewSeen) ?? false;
     Future.delayed(const Duration(seconds: 3), () {
       isLogin
           ? Navigator.pushReplacementNamed(context, LogInView.routeName)
