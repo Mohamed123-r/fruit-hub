@@ -4,11 +4,14 @@ import 'package:fruit_hub/generated/l10n.dart';
 import 'page_view_item.dart';
 
 class OnboardingPageView extends StatelessWidget {
-  const OnboardingPageView({super.key});
+  const OnboardingPageView({super.key, required this.controller});
+
+  final PageController controller;
 
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: controller,
       children: [
         PageViewItem(
           isVisible: true,
@@ -22,10 +25,10 @@ class OnboardingPageView extends StatelessWidget {
                 S.of(context).onboarding1_title,
               ),
               const Text(
-                '  HUB',
+                'Fruit',
               ),
               const Text(
-                'Fruit',
+                '  HUB',
               ),
             ],
           ),

@@ -7,17 +7,18 @@ import 'package:fruit_hub/generated/l10n.dart';
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
       {super.key,
-        required this.image,
-        required this.backgroundImage,
-        required this.subtitle,
-        required this.title,
-        required this.isVisible});
+      required this.image,
+      required this.backgroundImage,
+      required this.subtitle,
+      required this.title,
+      required this.isVisible});
 
   final String image, backgroundImage;
   final String subtitle;
   final Widget title;
 
   final bool isVisible;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -41,10 +42,15 @@ class PageViewItem extends StatelessWidget {
                   image,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Text(
-                  S.of(context).onboarding_skip,
+              SafeArea(
+                child: Visibility(
+                  visible: isVisible,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Text(
+                      S.of(context).onboarding_skip,
+                    ),
+                  ),
                 ),
               )
             ],
@@ -64,7 +70,6 @@ class PageViewItem extends StatelessWidget {
           child: Text(
             subtitle,
             textAlign: TextAlign.center,
-
           ),
         )
       ],
