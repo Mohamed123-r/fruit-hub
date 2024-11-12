@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/helper_funcation/is_arabic.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
+import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/generated/assets.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'page_view_item.dart';
@@ -23,13 +26,41 @@ class OnboardingPageView extends StatelessWidget {
             children: [
               Text(
                 S.of(context).onboarding1_title,
+                style: TextStyles.heading5Bold,
               ),
-              const Text(
-                'Fruit',
-              ),
-              const Text(
-                '  HUB',
-              ),
+              isArabic()
+                  ? Row(
+                      children: [
+                        Text(
+                          ' HUB',
+                          style: TextStyles.heading5Bold.copyWith(
+                            color: AppColors.orangeColor,
+                          ),
+                        ),
+                        Text(
+                          'Fruit',
+                          style: TextStyles.heading5Bold.copyWith(
+                            color: AppColors.greenColor,
+                          ),
+                        ),
+                      ],
+                    )
+                  : Row(
+                      children: [
+                        Text(
+                          ' Fruit',
+                          style: TextStyles.heading5Bold.copyWith(
+                            color: AppColors.greenColor,
+                          ),
+                        ),
+                        Text(
+                          'HUB',
+                          style: TextStyles.heading5Bold.copyWith(
+                            color: AppColors.orangeColor,
+                          ),
+                        ),
+                      ],
+                    ),
             ],
           ),
         ),
@@ -41,13 +72,7 @@ class OnboardingPageView extends StatelessWidget {
           title: Text(
             S.of(context).onboarding2_title,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Color(0xFF0C0D0D),
-              fontSize: 23,
-              fontFamily: 'Cairo',
-              fontWeight: FontWeight.w700,
-              height: 0,
-            ),
+            style: TextStyles.heading5Bold
           ),
         )
       ],
