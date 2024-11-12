@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/features/auth/presentation/views/log_in_view.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -49,10 +50,16 @@ class PageViewItem extends StatelessWidget {
                   visible: isVisible,
                   child: Padding(
                     padding: const EdgeInsets.all(16),
-                    child: Text(
-                      S.of(context).onboarding_skip,
-                      style: TextStyles.bodySmallRegular.copyWith(
-                        color: AppColors.grayscaleColor,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context)
+                            .pushReplacementNamed(LogInView.routeName);
+                      },
+                      child: Text(
+                        S.of(context).onboarding_skip,
+                        style: TextStyles.bodySmallRegular.copyWith(
+                          color: AppColors.grayscaleColor,
+                        ),
                       ),
                     ),
                   ),
