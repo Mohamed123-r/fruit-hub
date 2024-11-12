@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_hub/constant.dart';
+import 'package:fruit_hub/core/database/cache_helper.dart';
 import 'package:fruit_hub/core/helper_funcation/is_arabic.dart';
+import 'package:fruit_hub/features/auth/presentation/views/log_in_view.dart';
 import 'package:fruit_hub/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:fruit_hub/generated/assets.dart';
 
@@ -19,8 +22,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   void executeNavigation() {
+    bool isLogin = CacheHelper().getData(key: isOnboardingViewSeen);
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, OnboardingView.routeName);
+      isLogin
+          ? Navigator.pushReplacementNamed(context, LogInView.routeName)
+          : Navigator.pushReplacementNamed(context, OnboardingView.routeName);
     });
   }
 
