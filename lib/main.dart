@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:fruit_hub/core/database/cache_helper.dart';
 import 'package:fruit_hub/features/splash/presentation/views/splash_view.dart';
 import 'core/helper_funcation/on_generate_route.dart';
 import 'generated/l10n.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper().init();
+
   runApp(const MyApp());
 }
 
@@ -13,7 +17,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       locale: const Locale('ar'),
       localizationsDelegates: const [
