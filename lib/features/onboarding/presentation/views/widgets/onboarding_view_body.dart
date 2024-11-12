@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
+import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
 
 class OnboardingViewBody extends StatelessWidget {
@@ -19,6 +20,19 @@ class OnboardingViewBody extends StatelessWidget {
             activeColor: AppColors.greenColor,
             color: AppColors.greenColor.withOpacity(0.5),
           ),
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: CustomButton(
+            title: 'ابدأ الان',
+            onPressed: () {},
+          ),
+        ),
+        const SizedBox(
+          height: 42,
         ),
       ],
     );
