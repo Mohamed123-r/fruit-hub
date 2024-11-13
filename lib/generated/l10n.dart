@@ -120,80 +120,90 @@ class S {
     );
   }
 
-  /// ``
+  /// `Email`
   String get email {
     return Intl.message(
-      '',
+      'Email',
       name: 'email',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Password`
   String get password {
     return Intl.message(
-      '',
+      'Password',
       name: 'password',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Forgot password?`
   String get forgot_password {
     return Intl.message(
-      '',
+      'Forgot password?',
       name: 'forgot_password',
       desc: '',
       args: [],
     );
   }
 
-  /// `؟ `
+  /// `Don't have an account?`
   String get no_account {
     return Intl.message(
-      '؟ ',
+      'Don\'t have an account?',
       name: 'no_account',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Create an account`
   String get create_account {
     return Intl.message(
-      '',
+      'Create an account',
       name: 'create_account',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Or`
+  String get or_text {
+    return Intl.message(
+      'Or',
+      name: 'or_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in with Google`
   String get log_in_with_google {
     return Intl.message(
-      '',
+      'Log in with Google',
       name: 'log_in_with_google',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Log in with Facebook`
   String get log_in_with_facebook {
     return Intl.message(
-      '',
+      'Log in with Facebook',
       name: 'log_in_with_facebook',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Log in with Apple`
   String get log_in_with_apple {
     return Intl.message(
-      '',
+      'Log in with Apple',
       name: 'log_in_with_apple',
       desc: '',
       args: [],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class DontHaveAnAccountWidget extends StatelessWidget {
   const DontHaveAnAccountWidget({
@@ -13,13 +14,13 @@ class DontHaveAnAccountWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'لا تمتلك حساب؟ ',
+          S.of(context).no_account,
           style: TextStyles.bodyBasaRegular.copyWith(
             color: AppColors.grayscale400Color,
           ),
         ),
         Text(
-          'قم بإنشاء حساب',
+          S.of(context).create_account,
           style: TextStyles.bodyBasaRegular
               .copyWith(color: AppColors.greenColor),
         ),

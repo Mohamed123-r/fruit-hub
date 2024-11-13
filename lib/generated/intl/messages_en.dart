@@ -22,15 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "create_account": MessageLookupByLibrary.simpleMessage(""),
-        "email": MessageLookupByLibrary.simpleMessage(""),
-        "forgot_password": MessageLookupByLibrary.simpleMessage(""),
+        "create_account":
+            MessageLookupByLibrary.simpleMessage("Create an account"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "forgot_password":
+            MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "get_started": MessageLookupByLibrary.simpleMessage("Start now"),
         "log_in_text": MessageLookupByLibrary.simpleMessage("Log in"),
-        "log_in_with_apple": MessageLookupByLibrary.simpleMessage(""),
-        "log_in_with_facebook": MessageLookupByLibrary.simpleMessage(""),
-        "log_in_with_google": MessageLookupByLibrary.simpleMessage(""),
-        "no_account": MessageLookupByLibrary.simpleMessage("؟ "),
+        "log_in_with_apple":
+            MessageLookupByLibrary.simpleMessage("Log in with Apple"),
+        "log_in_with_facebook":
+            MessageLookupByLibrary.simpleMessage("Log in with Facebook"),
+        "log_in_with_google":
+            MessageLookupByLibrary.simpleMessage("Log in with Google"),
+        "no_account":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "onboarding1_subtext": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best offers and high quality."),
         "onboarding1_title": MessageLookupByLibrary.simpleMessage("Welcome to"),
@@ -39,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding2_title":
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
         "onboarding_skip": MessageLookupByLibrary.simpleMessage("Skip"),
-        "password": MessageLookupByLibrary.simpleMessage("")
+        "or_text": MessageLookupByLibrary.simpleMessage("Or"),
+        "password": MessageLookupByLibrary.simpleMessage("Password")
       };
 }

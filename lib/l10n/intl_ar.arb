@@ -11,6 +11,7 @@
   "forgot_password": "نسيت كلمة المرور؟",
   "no_account": "لا تمتلك حساب؟ ",
   "create_account": "قم بإنشاء حساب",
+  "or_text": "أو",
   "log_in_with_google": "تسجيل بواسطة جوجل",
   "log_in_with_facebook": "تسجيل بواسطة فيسبوك",
   "log_in_with_apple": "تسجيل بواسطة أبل"
