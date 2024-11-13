@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/widgets/custom_app_bar.dart';
+import 'package:fruit_hub/features/auth/presentation/views/widgets/log_in_view_body.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class LogInView extends StatelessWidget {
   const LogInView({super.key});
@@ -7,6 +10,14 @@ class LogInView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: buildAppBar(
+        context,
+        title: S.of(context).log_in_text,
+      ),
+      body: const LogInViewBody(),
+    );
   }
+
+
 }
