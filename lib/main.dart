@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_hub/core/database/cache_helper.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/features/splash/presentation/views/splash_view.dart';
 import 'core/helper_funcation/on_generate_route.dart';
 import 'generated/l10n.dart';
@@ -18,6 +19,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Cairo',
+        scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppColors.greenColor,
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       locale: const Locale('ar'),
       localizationsDelegates: const [
