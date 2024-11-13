@@ -7,7 +7,10 @@ class Assets {
   static const String fontsCairoRegular = 'assets/fonts/Cairo-Regular.ttf';
   static const String fontsCairoSemiBold = 'assets/fonts/Cairo-SemiBold.ttf';
   static const String imagesAppIcon = 'assets/images/app_icon.png';
+  static const String imagesAppleIcon = 'assets/images/appleIcon.svg';
   static const String imagesCircles = 'assets/images/circles.svg';
+  static const String imagesFacebookIcon = 'assets/images/facebookIcon.svg';
+  static const String imagesGoogleIcon = 'assets/images/googleIcon.svg';
   static const String imagesLogo = 'assets/images/Logo.svg';
   static const String imagesPageViewItem1BackgroundImage = 'assets/images/PageViewItem1BackgroundImage.svg';
   static const String imagesPageViewItem1Image = 'assets/images/PageViewItem1Image.svg';
