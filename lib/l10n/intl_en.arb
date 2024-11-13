@@ -5,5 +5,13 @@
   "onboarding2_subtext": "We bring you the finest carefully selected fruits. View details, photos, and reviews to ensure you pick the perfect fruit.",
   "onboarding_skip": "Skip",
   "get_started": "Start now",
-  "log_in_text": "Log in"
+  "log_in_text": "Log in",
+  "email": "Email",
+  "password": "Password",
+  "forgot_password": "Forgot password?",
+  "no_account": "Don't have an account?",
+  "create_account": "Create an account",
+  "log_in_with_google": "Log in with Google",
+  "log_in_with_facebook": "Log in with Facebook",
+  "log_in_with_apple": "Log in with Apple"
 }

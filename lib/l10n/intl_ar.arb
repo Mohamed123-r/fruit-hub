@@ -5,5 +5,13 @@
   "onboarding2_subtext": "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
   "onboarding_skip": "تخط",
   "get_started": "ابدأ الان",
-  "log_in_text": "تسجيل دخول"
+  "log_in_text": "تسجيل دخول",
+  "email": "البريد الالكتروني",
+  "password": "كلمة المرور",
+  "forgot_password": "نسيت كلمة المرور؟",
+  "no_account": "لا تمتلك حساب؟ ",
+  "create_account": "قم بإنشاء حساب",
+  "log_in_with_google": "تسجيل بواسطة جوجل",
+  "log_in_with_facebook": "تسجيل بواسطة فيسبوك",
+  "log_in_with_apple": "تسجيل بواسطة أبل"
 }

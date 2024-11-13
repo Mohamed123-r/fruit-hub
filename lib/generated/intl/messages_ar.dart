@@ -22,8 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "create_account":
+            MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+        "forgot_password":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "get_started": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "log_in_text": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "log_in_with_apple":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
+        "log_in_with_facebook":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
+        "log_in_with_google":
+            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "no_account": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟ "),
         "onboarding1_subtext": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية"),
         "onboarding1_title":
@@ -31,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding2_subtext": MessageLookupByLibrary.simpleMessage(
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
         "onboarding2_title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
-        "onboarding_skip": MessageLookupByLibrary.simpleMessage("تخط")
+        "onboarding_skip": MessageLookupByLibrary.simpleMessage("تخط"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور")
       };
 }
