@@ -22,21 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "conditions": MessageLookupByLibrary.simpleMessage("Terms "),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create an account"),
+        "create_new_account":
+            MessageLookupByLibrary.simpleMessage("Create New Account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "get_started": MessageLookupByLibrary.simpleMessage("Start now"),
-        "log_in_text": MessageLookupByLibrary.simpleMessage("Log in"),
+        "have_account":
+            MessageLookupByLibrary.simpleMessage("Have an account? "),
+        "log_in_text": MessageLookupByLibrary.simpleMessage("Log In"),
         "log_in_with_apple":
             MessageLookupByLibrary.simpleMessage("Log in with Apple"),
         "log_in_with_facebook":
             MessageLookupByLibrary.simpleMessage("Log in with Facebook"),
         "log_in_with_google":
             MessageLookupByLibrary.simpleMessage("Log in with Google"),
+        "name": MessageLookupByLibrary.simpleMessage("Full Name"),
         "no_account":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
         "onboarding1_subtext": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best offers and high quality."),
         "onboarding1_title": MessageLookupByLibrary.simpleMessage("Welcome to"),
@@ -46,6 +52,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search and Shop"),
         "onboarding_skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "or_text": MessageLookupByLibrary.simpleMessage("Or"),
-        "password": MessageLookupByLibrary.simpleMessage("Password")
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "privacy_policy": MessageLookupByLibrary.simpleMessage(
+            "By creating an account, you agree to "),
+        "sign_up": MessageLookupByLibrary.simpleMessage("New Account"),
+        "terms": MessageLookupByLibrary.simpleMessage("Our "),
+        "with_conditions":
+            MessageLookupByLibrary.simpleMessage("and Conditions ")
       };
 }

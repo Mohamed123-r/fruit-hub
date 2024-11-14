@@ -110,10 +110,10 @@ class S {
     );
   }
 
-  /// `Log in`
+  /// `Log In`
   String get log_in_text {
     return Intl.message(
-      'Log in',
+      'Log In',
       name: 'log_in_text',
       desc: '',
       args: [],
@@ -150,10 +150,10 @@ class S {
     );
   }
 
-  /// `Don't have an account?`
+  /// `Don't have an account? `
   String get no_account {
     return Intl.message(
-      'Don\'t have an account?',
+      'Don\'t have an account? ',
       name: 'no_account',
       desc: '',
       args: [],
@@ -205,6 +205,86 @@ class S {
     return Intl.message(
       'Log in with Apple',
       name: 'log_in_with_apple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Account`
+  String get sign_up {
+    return Intl.message(
+      'New Account',
+      name: 'sign_up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get name {
+    return Intl.message(
+      'Full Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our `
+  String get terms {
+    return Intl.message(
+      'Our ',
+      name: 'terms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms `
+  String get conditions {
+    return Intl.message(
+      'Terms ',
+      name: 'conditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `and Conditions `
+  String get with_conditions {
+    return Intl.message(
+      'and Conditions ',
+      name: 'with_conditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you agree to `
+  String get privacy_policy {
+    return Intl.message(
+      'By creating an account, you agree to ',
+      name: 'privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create New Account`
+  String get create_new_account {
+    return Intl.message(
+      'Create New Account',
+      name: 'create_new_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Have an account? `
+  String get have_account {
+    return Intl.message(
+      'Have an account? ',
+      name: 'have_account',
       desc: '',
       args: [],
     );

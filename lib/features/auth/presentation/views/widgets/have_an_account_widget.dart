@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class HaveAnAccountWidget extends StatelessWidget {
   const HaveAnAccountWidget({
@@ -13,7 +14,7 @@ class HaveAnAccountWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "تمتلك حساب بالفعل؟ ",
+          S.of(context).have_account,
           style: TextStyles.bodyBasaRegular.copyWith(
             color: AppColors.grayscale400Color,
           ),
@@ -23,7 +24,7 @@ class HaveAnAccountWidget extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Text(
-            " تسجيل دخول",
+            S.of(context).log_in_text,
             style: TextStyles.bodyBasaRegular
                 .copyWith(color: AppColors.greenColor),
           ),

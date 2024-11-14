@@ -19,8 +19,8 @@ class SignUpViewBody extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            const CustomTextField(
-              hintText: 'الاسم كامل',
+             CustomTextField(
+              hintText: S.of(context).name,
               keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(
@@ -47,7 +47,7 @@ class SignUpViewBody extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            CustomButton(title: 'إنشاء حساب جديد', onPressed: () {}),
+            CustomButton(title:   S.of(context).create_new_account, onPressed: () {}),
             const SizedBox(
               height: 24,
             ),

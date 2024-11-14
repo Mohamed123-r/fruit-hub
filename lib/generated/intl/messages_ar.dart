@@ -22,12 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "conditions": MessageLookupByLibrary.simpleMessage(" والأحكام "),
         "create_account":
             MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+        "create_new_account":
+            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "get_started": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
+        "have_account": MessageLookupByLibrary.simpleMessage(" تمتلك حساب؟ "),
         "log_in_text": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "log_in_with_apple":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
@@ -35,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
         "log_in_with_google":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "no_account": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟ "),
         "onboarding1_subtext": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية"),
@@ -45,6 +50,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding2_title": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
         "onboarding_skip": MessageLookupByLibrary.simpleMessage("تخط"),
         "or_text": MessageLookupByLibrary.simpleMessage("أو"),
-        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور")
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "privacy_policy": MessageLookupByLibrary.simpleMessage(
+            "من خلال إنشاء حساب ، فإنك توافق على "),
+        "sign_up": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+        "terms": MessageLookupByLibrary.simpleMessage("الشروط "),
+        "with_conditions": MessageLookupByLibrary.simpleMessage("الخاصة بنا ")
       };
 }

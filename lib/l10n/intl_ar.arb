@@ -14,5 +14,13 @@
   "or_text": "أو",
   "log_in_with_google": "تسجيل بواسطة جوجل",
   "log_in_with_facebook": "تسجيل بواسطة فيسبوك",
-  "log_in_with_apple": "تسجيل بواسطة أبل"
+  "log_in_with_apple": "تسجيل بواسطة أبل",
+  "sign_up": "حساب جديد",
+  "name": "الاسم كامل",
+  "terms": "الشروط ",
+  "conditions": " والأحكام ",
+  "with_conditions": "الخاصة بنا ",
+  "privacy_policy": "من خلال إنشاء حساب ، فإنك توافق على ",
+  "create_new_account": "إنشاء حساب جديد",
+  "have_account": " تمتلك حساب؟ "
 }
