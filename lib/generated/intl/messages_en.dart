@@ -22,14 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accept_terms": MessageLookupByLibrary.simpleMessage(
+            "Please accept terms and conditions"),
+        "account_exists": MessageLookupByLibrary.simpleMessage(
+            "The account already exists for that email."),
         "conditions": MessageLookupByLibrary.simpleMessage("Terms "),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "create_new_account":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "error_occurred": MessageLookupByLibrary.simpleMessage(
+            "Oh no! An error occurred. Please try again."),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "generic_error": MessageLookupByLibrary.simpleMessage("Error"),
         "get_started": MessageLookupByLibrary.simpleMessage("Start now"),
         "have_account":
             MessageLookupByLibrary.simpleMessage("Have an account? "),
@@ -43,6 +50,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("Full Name"),
         "no_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
+        "no_internet":
+            MessageLookupByLibrary.simpleMessage("No internet connection."),
+        "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "onboarding1_subtext": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of premium fresh fruits and enjoy the best offers and high quality."),
         "onboarding1_title": MessageLookupByLibrary.simpleMessage("Welcome to"),
@@ -56,7 +66,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to "),
         "sign_up": MessageLookupByLibrary.simpleMessage("New Account"),
+        "success": MessageLookupByLibrary.simpleMessage("Success"),
         "terms": MessageLookupByLibrary.simpleMessage("Our "),
+        "weak_password": MessageLookupByLibrary.simpleMessage(
+            "The password provided is too weak."),
         "with_conditions":
             MessageLookupByLibrary.simpleMessage("and Conditions ")
       };

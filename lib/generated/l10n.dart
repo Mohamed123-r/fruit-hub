@@ -289,6 +289,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Please accept terms and conditions`
+  String get accept_terms {
+    return Intl.message(
+      'Please accept terms and conditions',
+      name: 'accept_terms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oh no! An error occurred. Please try again.`
+  String get error_occurred {
+    return Intl.message(
+      'Oh no! An error occurred. Please try again.',
+      name: 'error_occurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No internet connection.`
+  String get no_internet {
+    return Intl.message(
+      'No internet connection.',
+      name: 'no_internet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get account_exists {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'account_exists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak.`
+  String get weak_password {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'weak_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get success {
+    return Intl.message(
+      'Success',
+      name: 'success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get generic_error {
+    return Intl.message(
+      'Error',
+      name: 'generic_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ok`
+  String get ok {
+    return Intl.message(
+      'Ok',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

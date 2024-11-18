@@ -83,6 +83,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     if (isAgree == true) {
                       BlocProvider.of<SignUpCubit>(context)
                           .createUserWithEmailAndPassword(
+                        context: context,
                         name: name,
                         email: email,
                         password: password,
@@ -90,7 +91,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     } else {
                       customError(
                         context,
-                        massage: 'Please accept terms and conditions',
+                        massage: S.of(context).accept_terms,
                       );
                     }
                   } else {

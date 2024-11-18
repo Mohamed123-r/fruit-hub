@@ -22,14 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accept_terms":
+            MessageLookupByLibrary.simpleMessage("يرجى قبول الشروط والأحكام"),
+        "account_exists": MessageLookupByLibrary.simpleMessage(
+            "الحساب موجود بالفعل لهذا البريد الإلكتروني."),
         "conditions": MessageLookupByLibrary.simpleMessage(" والأحكام "),
         "create_account":
             MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "create_new_account":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+        "error_occurred": MessageLookupByLibrary.simpleMessage(
+            "عذرًا! حدث خطأ. يرجى المحاولة مرة أخرى."),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "generic_error": MessageLookupByLibrary.simpleMessage("خطأ"),
         "get_started": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "have_account": MessageLookupByLibrary.simpleMessage(" تمتلك حساب؟ "),
         "log_in_text": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
@@ -41,6 +48,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
         "no_account": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟ "),
+        "no_internet":
+            MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالإنترنت."),
+        "ok": MessageLookupByLibrary.simpleMessage("موافق"),
         "onboarding1_subtext": MessageLookupByLibrary.simpleMessage(
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية"),
         "onboarding1_title":
@@ -54,7 +64,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على "),
         "sign_up": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+        "success": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
         "terms": MessageLookupByLibrary.simpleMessage("الشروط "),
+        "weak_password": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور المقدمة ضعيفة للغاية."),
         "with_conditions": MessageLookupByLibrary.simpleMessage("الخاصة بنا ")
       };
 }

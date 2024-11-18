@@ -1,10 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/constant.dart';
 import 'package:fruit_hub/core/error/exception.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class FirebaseAuthService {
   Future<User> createEmailAndPassword(
-      {required String emailAddress, required String password}) async {
+      {context,required String emailAddress, required String password, }) async {
     try {
       final credential =
           await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -17,24 +18,19 @@ class FirebaseAuthService {
           "Exception in  firebaseAuthService.createUserWithEmailAndPassword :$e");
 
       if (e.code == 'weak-password') {
-        logger.e(
-            "Exception in  firebaseAuthService.createUserWithEmailAndPassword :$e");
-        throw CustomException(message: 'The password provided is too weak.');
+        throw CustomException(message: S.of(context).weak_password);
       } else if (e.code == 'email-already-in-use') {
-        throw CustomException(
-            message: 'The account already exists for that email.');
+        throw CustomException(message: S.of(context).account_exists);
       } else if (e.code == 'network-request-failed') {
-        throw CustomException(message: 'No internet connection.');
+        throw CustomException(message: S.of(context).no_internet);
       } else {
-        throw CustomException(
-            message: 'Oh no! An error occurred. Please try again.');
+        throw CustomException(message: S.of(context).error_occurred);
       }
     } catch (e) {
       logger.e(
           "Exception in  firebaseAuthService.createUserWithEmailAndPassword :$e");
 
-      throw CustomException(
-          message: 'Oh no! An error occurred. Please try again.');
+      throw CustomException(message: S.of(context).error_occurred);
     }
   }
 }

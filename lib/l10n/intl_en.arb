@@ -22,5 +22,13 @@
   "with_conditions": "and Conditions ",
   "privacy_policy": "By creating an account, you agree to ",
   "create_new_account": "Create New Account",
-  "have_account": "Have an account? "
+  "have_account": "Have an account? ",
+  "accept_terms": "Please accept terms and conditions",
+  "error_occurred": "Oh no! An error occurred. Please try again.",
+  "no_internet": "No internet connection.",
+  "account_exists": "The account already exists for that email.",
+  "weak_password": "The password provided is too weak.",
+  "success": "Success",
+  "generic_error": "Error",
+  "ok": "Ok"
 }
