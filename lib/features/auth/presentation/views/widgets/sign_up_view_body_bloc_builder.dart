@@ -15,7 +15,7 @@ class SignUpViewBodyBlocBuilder extends StatelessWidget {
     return BlocConsumer<SignUpCubit, SignUpState>(
       listener: (context, state) {
         if (state is SignUpSuccess) {
-          Navigator.pop(context);
+        //  Navigator.pop(context);
         }
         if (state is SignUpFailure) {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(

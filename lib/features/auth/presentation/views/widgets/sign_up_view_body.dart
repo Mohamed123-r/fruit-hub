@@ -20,6 +20,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   late String email, password, name;
+  late bool isAgree = false;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               const SizedBox(
                 height: 16,
               ),
-              const TermsAndConditionsWidget(),
+              TermsAndConditionsWidget(
+                onSelected: (value) {
+                  setState(() {
+                    isAgree = value;
+                  });
+                },
+              ),
               const SizedBox(
                 height: 32,
               ),
@@ -76,12 +83,21 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
-                    BlocProvider.of<SignUpCubit>(context)
-                        .createUserWithEmailAndPassword(
-                      name: name,
-                      email: email,
-                      password: password,
-                    );
+                    if (isAgree==true) {
+                      BlocProvider.of<SignUpCubit>(context)
+                          .createUserWithEmailAndPassword(
+                        name: name,
+                        email: email,
+                        password: password,
+                      );
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content:
+                              Text('Please accept the terms and conditions'),
+                        ),
+                      );
+                    }
                   } else {
                     setState(() {
                       autovalidateMode = AutovalidateMode.always;
