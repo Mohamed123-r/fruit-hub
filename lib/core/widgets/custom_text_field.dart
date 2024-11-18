@@ -3,20 +3,26 @@ import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField(
-      {super.key,
-      required this.hintText,
-      required this.keyboardType,
-      this.suffixIcon, this.onSaved});
+  const CustomTextField({
+    super.key,
+    required this.hintText,
+    required this.keyboardType,
+    this.suffixIcon,
+    this.onSaved,
+    this.obscureText,
+  });
 
   final String hintText;
   final TextInputType keyboardType;
   final Widget? suffixIcon;
- final void Function(String?)? onSaved ;
+  final void Function(String?)? onSaved;
+
+  final bool? obscureText;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      onSaved:onSaved ,
+      onSaved: onSaved,
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Please enter some text';
@@ -24,6 +30,7 @@ class CustomTextField extends StatelessWidget {
         return null;
       },
       keyboardType: keyboardType,
+      obscureText: obscureText ?? false,
       decoration: InputDecoration(
         filled: true,
         fillColor: const Color(0xffF9FAFA),

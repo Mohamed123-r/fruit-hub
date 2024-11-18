@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
+import 'package:fruit_hub/core/widgets/custom_password.dart';
 import 'package:fruit_hub/core/widgets/custom_text_field.dart';
 import 'package:fruit_hub/features/auth/presentation/manage/sign_up_cubit/sign_up_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -55,15 +56,10 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               const SizedBox(
                 height: 16,
               ),
-              CustomTextField(
+              CustomPassword(
                 onSaved: (value) {
                   password = value!;
                 },
-                hintText: S.of(context).password,
-                keyboardType: TextInputType.visiblePassword,
-                suffixIcon: const Icon(
-                  Icons.remove_red_eye,
-                ),
               ),
               const SizedBox(
                 height: 16,
@@ -83,7 +79,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
-                    if (isAgree==true) {
+                    if (isAgree == true) {
                       BlocProvider.of<SignUpCubit>(context)
                           .createUserWithEmailAndPassword(
                         name: name,
