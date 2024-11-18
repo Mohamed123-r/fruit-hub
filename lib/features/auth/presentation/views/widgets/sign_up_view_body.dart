@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hub/core/helper_funcation/custom_error.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/custom_password.dart';
 import 'package:fruit_hub/core/widgets/custom_text_field.dart';
@@ -87,11 +88,9 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         password: password,
                       );
                     } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content:
-                              Text('Please accept the terms and conditions'),
-                        ),
+                      customError(
+                        context,
+                        massage: 'Please accept terms and conditions',
                       );
                     }
                   } else {

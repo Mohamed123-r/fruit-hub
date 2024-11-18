@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hub/core/helper_funcation/custom_error.dart';
 import 'package:fruit_hub/features/auth/presentation/manage/sign_up_cubit/sign_up_cubit.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
@@ -15,12 +16,13 @@ class SignUpViewBodyBlocBuilder extends StatelessWidget {
     return BlocConsumer<SignUpCubit, SignUpState>(
       listener: (context, state) {
         if (state is SignUpSuccess) {
-        //  Navigator.pop(context);
+          //  Navigator.pop(context);
         }
         if (state is SignUpFailure) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text(state.massage),
-          ));
+          customError(
+            context,
+            massage: state.massage,
+          );
         }
       },
       builder: (context, state) {
