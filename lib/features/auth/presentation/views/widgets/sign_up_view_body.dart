@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/core/widgets/custom_text_field.dart';
+import 'package:fruit_hub/features/auth/presentation/manage/sign_up_cubit/sign_up_cubit.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 import 'display_tems_and_condaitions.dart';
@@ -19,7 +21,7 @@ class SignUpViewBody extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-             CustomTextField(
+            CustomTextField(
               hintText: S.of(context).name,
               keyboardType: TextInputType.emailAddress,
             ),
@@ -47,7 +49,16 @@ class SignUpViewBody extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            CustomButton(title:   S.of(context).create_new_account, onPressed: () {}),
+            CustomButton(
+              title: S.of(context).create_new_account,
+              onPressed: () {
+                context.read<SignUpCubit>().createUserWithEmailAndPassword(
+                      email: "email",
+                      password: "password",
+                      name: "nae",
+                    );
+              },
+            ),
             const SizedBox(
               height: 24,
             ),
