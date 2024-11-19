@@ -66,8 +66,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_up": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "success": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
         "terms": MessageLookupByLibrary.simpleMessage("الشروط "),
+        "user_not_found": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد مستخدم بهذا البريد الإلكتروني."),
         "weak_password": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور المقدمة ضعيفة للغاية."),
-        "with_conditions": MessageLookupByLibrary.simpleMessage("الخاصة بنا ")
+        "with_conditions": MessageLookupByLibrary.simpleMessage("الخاصة بنا "),
+        "wrong_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير صحيحة.")
       };
 }

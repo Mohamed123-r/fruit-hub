@@ -68,9 +68,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_up": MessageLookupByLibrary.simpleMessage("New Account"),
         "success": MessageLookupByLibrary.simpleMessage("Success"),
         "terms": MessageLookupByLibrary.simpleMessage("Our "),
+        "user_not_found": MessageLookupByLibrary.simpleMessage(
+            "No user found for that email."),
         "weak_password": MessageLookupByLibrary.simpleMessage(
             "The password provided is too weak."),
         "with_conditions":
-            MessageLookupByLibrary.simpleMessage("and Conditions ")
+            MessageLookupByLibrary.simpleMessage("and Conditions "),
+        "wrong_password": MessageLookupByLibrary.simpleMessage(
+            "Wrong password provided for that user.")
       };
 }
