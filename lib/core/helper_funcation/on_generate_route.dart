@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/auth/presentation/views/log_in_view.dart';
+import 'package:fruit_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruit_hub/features/auth/presentation/views/sign_up_view.dart';
 import 'package:fruit_hub/features/onboarding/presentation/views/onboarding_view.dart';
 

@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/constant.dart';
 import 'package:fruit_hub/core/database/cache_helper.dart';
 import 'package:fruit_hub/core/helper_funcation/is_arabic.dart';
-import 'package:fruit_hub/features/auth/presentation/views/log_in_view.dart';
+import 'package:fruit_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruit_hub/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:fruit_hub/generated/assets.dart';
 
