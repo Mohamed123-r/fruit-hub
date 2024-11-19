@@ -41,7 +41,7 @@ class FirebaseAuthService {
     context,
     required String emailAddress,
     required String password,
-  }) async {
+  })  async {
     try {
       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailAddress,
