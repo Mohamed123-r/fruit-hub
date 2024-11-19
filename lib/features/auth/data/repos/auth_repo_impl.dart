@@ -14,7 +14,8 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
-      {context,required String email,
+      {context,
+      required String email,
       required String password,
       required String name}) async {
     try {
@@ -30,6 +31,30 @@ class AuthRepoImpl extends AuthRepo {
       );
     } catch (e) {
       logger.e("Exception in  createUserWithEmailAndPassword :$e");
+      return left(
+        ServerFailure(
+          e.toString(),
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
+      {context, required String email, required String password}) async {
+    try {
+      var user = await firebaseAuthService.signInWithEmailAndPassword(
+        context: context,
+        emailAddress: email,
+        password: password,
+      );
+      return Right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      return Left(
+        ServerFailure(e.message),
+      );
+    } catch (e) {
+      logger.e("Exception in  signInWithEmailAndPassword :$e");
       return left(
         ServerFailure(
           e.toString(),
