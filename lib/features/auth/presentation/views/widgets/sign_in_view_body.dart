@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fruit_hub/core/services/bloc_opesever.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
@@ -82,7 +81,10 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                             password: password,
                           );
                     } else {
-                      autovalidateMode = AutovalidateMode.always;
+                      setState(() {
+                        autovalidateMode = AutovalidateMode.always;
+                      });
+
                     }
                   }),
               SizedBox(
