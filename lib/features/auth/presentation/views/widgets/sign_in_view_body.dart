@@ -84,7 +84,6 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                       setState(() {
                         autovalidateMode = AutovalidateMode.always;
                       });
-
                     }
                   }),
               SizedBox(
@@ -104,7 +103,11 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                   Assets.imagesGoogleIcon,
                   fit: BoxFit.scaleDown,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  context
+                      .read<SignInCubit>()
+                      .signInWithGoogle(context: context);
+                },
               ),
               SizedBox(
                 height: 16,
