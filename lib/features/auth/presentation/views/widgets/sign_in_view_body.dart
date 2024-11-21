@@ -129,7 +129,12 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                   Assets.imagesFacebookIcon,
                   fit: BoxFit.scaleDown,
                 ),
-                onPressed: () {},
+                onPressed: ()
+                {
+                  context
+                      .read<SignInCubit>()
+                      .signInWithFacebook(context: context);
+                },
               ),
             ],
           ),
