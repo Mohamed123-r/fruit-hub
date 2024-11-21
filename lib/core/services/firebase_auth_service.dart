@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruit_hub/constant.dart';
 import 'package:fruit_hub/core/error/exception.dart';
 import 'package:fruit_hub/generated/l10n.dart';
@@ -86,5 +87,17 @@ class FirebaseAuthService {
     return await FirebaseAuth.instance
         .signInWithCredential(credential)
         .then((value) => value.user!);
+  }
+
+  Future<User> signInWithFacebook() async {
+    // Trigger the sign-in flow
+    final LoginResult loginResult = await FacebookAuth.instance.login();
+
+    final OAuthCredential facebookAuthCredential =
+        FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
+
+    return (await FirebaseAuth.instance
+            .signInWithCredential(facebookAuthCredential))
+        .user!;
   }
 }
