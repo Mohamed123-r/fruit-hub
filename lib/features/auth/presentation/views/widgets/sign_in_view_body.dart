@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -112,25 +114,30 @@ class _SignInViewBodyState extends State<SignInViewBody> {
               SizedBox(
                 height: 16,
               ),
-              SocialLoginButton(
-                title: S.of(context).log_in_with_apple,
-                icon: SvgPicture.asset(
-                  Assets.imagesAppleIcon,
-                  fit: BoxFit.scaleDown,
-                ),
-                onPressed: () {},
-              ),
-              SizedBox(
-                height: 16,
-              ),
+              Platform.isIOS
+                  ? Column(
+                      children: [
+                        SocialLoginButton(
+                          title: S.of(context).log_in_with_apple,
+                          icon: SvgPicture.asset(
+                            Assets.imagesAppleIcon,
+                            fit: BoxFit.scaleDown,
+                          ),
+                          onPressed: () {},
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                      ],
+                    )
+                  : SizedBox(),
               SocialLoginButton(
                 title: S.of(context).log_in_with_facebook,
                 icon: SvgPicture.asset(
                   Assets.imagesFacebookIcon,
                   fit: BoxFit.scaleDown,
                 ),
-                onPressed: ()
-                {
+                onPressed: () {
                   context
                       .read<SignInCubit>()
                       .signInWithFacebook(context: context);
