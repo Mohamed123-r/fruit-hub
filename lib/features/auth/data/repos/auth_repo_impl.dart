@@ -57,7 +57,8 @@ class AuthRepoImpl extends AuthRepo {
         emailAddress: email,
         password: password,
       );
-      return Right(UserModel.fromFirebaseUser(user));
+      var data = await getUserData(userId: user.uid);
+      return Right(data);
     } on CustomException catch (e) {
       return Left(
         ServerFailure(e.message),
@@ -119,8 +120,19 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future addUserData({required UserEntity user}) async {
+  Future addUserData({required UserEntity user, String? userId}) async {
     await fireStoreService.addData(
-        path: EndPoints.userCollectionPath, data: user.toMap());
+        path: EndPoints.userCollectionPath,
+        data: user.toMap(),
+        documentId: user.uId);
+  }
+
+  @override
+  Future<UserEntity> getUserData({
+    required String userId,
+  }) async {
+    var data = await fireStoreService.getData(
+        path: EndPoints.userCollectionPath, documentId: userId);
+    return UserModel.fromjson(data);
   }
 }
