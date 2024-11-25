@@ -29,20 +29,16 @@ class AuthRepoImpl extends AuthRepo {
         emailAddress: email,
         password: password,
       );
-      var userEntity = UserModel.fromFirebaseUser(user);
+      var userEntity = UserEntity(uId: user.uid, email: email, name: name);
       await addUserData(user: userEntity);
       return Right(userEntity);
     } on CustomException catch (e) {
-      if (user != null) {
-        await firebaseAuthService.deleteUser();
-      }
+      await deleteUser(user);
       return Left(
         ServerFailure(e.message),
       );
     } catch (e) {
-      if (user != null) {
-        await firebaseAuthService.deleteUser();
-      }
+      await deleteUser(user);
       logger.e("Exception in  createUserWithEmailAndPassword :$e");
       return left(
         ServerFailure(
@@ -78,10 +74,15 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signInWithGoogle({context}) async {
+    User? user;
     try {
-      var user = await firebaseAuthService.signInWithGoogle(context);
-      return Right(UserModel.fromFirebaseUser(user));
+      user = await firebaseAuthService.signInWithGoogle(context);
+      var userEntity = UserEntity(
+          uId: user.uid, email: user.email!, name: user.displayName!);
+      await addUserData(user: userEntity);
+      return Right(userEntity);
     } catch (e) {
+      deleteUser(user);
       logger.e("Exception in  signInWithGoogle :$e");
       return left(
         ServerFailure(
@@ -93,16 +94,27 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signInWithFacebook({context}) async {
+    User? user;
     try {
-      var user = await firebaseAuthService.signInWithFacebook();
+      user = await firebaseAuthService.signInWithFacebook();
+      var userEntity = UserEntity(
+          uId: user.uid, email: user.email!, name: user.displayName!);
+      await addUserData(user: userEntity);
       return Right(UserModel.fromFirebaseUser(user));
     } catch (e) {
+      deleteUser(user);
       logger.e("Exception in  signInWithFacebook :$e");
       return left(
         ServerFailure(
           e.toString(),
         ),
       );
+    }
+  }
+
+  Future<void> deleteUser(User? user) async {
+    if (user != null) {
+      await firebaseAuthService.deleteUser();
     }
   }
 
