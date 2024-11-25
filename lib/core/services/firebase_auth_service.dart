@@ -6,6 +6,10 @@ import 'package:fruit_hub/generated/l10n.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthService {
+  Future<void> deleteUser() async {
+    return await FirebaseAuth.instance.currentUser!.delete();
+  }
+
   Future<User> createEmailAndPassword({
     context,
     required String emailAddress,
