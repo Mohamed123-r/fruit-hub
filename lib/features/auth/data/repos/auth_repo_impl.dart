@@ -80,7 +80,8 @@ class AuthRepoImpl extends AuthRepo {
       user = await firebaseAuthService.signInWithGoogle(context);
       var userEntity = UserEntity(
           uId: user.uid, email: user.email!, name: user.displayName!);
-      await addUserData(user: userEntity);
+
+      await checkIfDocumentExists(user, userEntity);
       return Right(userEntity);
     } catch (e) {
       deleteUser(user);
@@ -101,6 +102,7 @@ class AuthRepoImpl extends AuthRepo {
       var userEntity = UserEntity(
           uId: user.uid, email: user.email!, name: user.displayName!);
       await addUserData(user: userEntity);
+      await checkIfDocumentExists(user, userEntity);
       return Right(UserModel.fromFirebaseUser(user));
     } catch (e) {
       deleteUser(user);
@@ -134,5 +136,17 @@ class AuthRepoImpl extends AuthRepo {
     var data = await fireStoreService.getData(
         path: EndPoints.userCollectionPath, documentId: userId);
     return UserModel.fromjson(data);
+  }
+
+  Future<void> checkIfDocumentExists(User user, UserEntity userEntity) async {
+    var isUserExists = await fireStoreService.checkIfDocumentExists(
+      documentId: user.uid,
+      path: EndPoints.userCollectionPath,
+    );
+    if (isUserExists) {
+      await getUserData(userId: user.uid);
+    } else {
+      await addUserData(user: userEntity);
+    }
   }
 }

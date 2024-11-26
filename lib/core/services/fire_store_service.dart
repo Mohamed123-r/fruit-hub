@@ -22,4 +22,11 @@ class FireStoreService extends DatabaseService {
     var data = await fireStore.collection(path).doc(documentId).get();
     return data.data() as Map<String, dynamic>;
   }
+
+  @override
+  Future<bool> checkIfDocumentExists(
+      {required String path, required String documentId}) async {
+    var data = await fireStore.collection(path).doc(documentId).get();
+    return data.exists;
+  }
 }
