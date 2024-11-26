@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "weak_password": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور المقدمة ضعيفة للغاية."),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا"),
+        "welcome_to_sign_in": MessageLookupByLibrary.simpleMessage(
+            " تم عمل الحساب بنجاح يرجى تسجيل الدخول."),
         "with_conditions": MessageLookupByLibrary.simpleMessage("الخاصة بنا "),
         "wrong_password":
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير صحيحة.")

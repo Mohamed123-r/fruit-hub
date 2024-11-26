@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/helper_funcation/custom_error.dart';
 import 'package:fruit_hub/core/widgets/custom_progress_hud.dart';
 import 'package:fruit_hub/features/auth/presentation/manage/sign_up_cubit/sign_up_cubit.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 import 'sign_up_view_body.dart';
 
 class SignUpViewBodyBlocBuilder extends StatelessWidget {
@@ -15,7 +16,7 @@ class SignUpViewBodyBlocBuilder extends StatelessWidget {
     return BlocConsumer<SignUpCubit, SignUpState>(
       listener: (context, state) {
         if (state is SignUpSuccess) {
-          //  Navigator.pop(context);
+          customSuccess(context, massage: S.of(context).welcome_to_sign_in);
         }
         if (state is SignUpFailure) {
           customError(

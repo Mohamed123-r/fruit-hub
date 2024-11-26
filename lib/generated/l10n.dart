@@ -399,6 +399,16 @@ class S {
       args: [],
     );
   }
+
+  /// `The account has been created successfully, please log in.`
+  String get welcome_to_sign_in {
+    return Intl.message(
+      'The account has been created successfully, please log in.',
+      name: 'welcome_to_sign_in',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
