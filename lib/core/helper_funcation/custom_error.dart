@@ -24,7 +24,6 @@ void customSuccess(BuildContext context, {required String massage}) {
     context: context,
     animType: AnimType.scale,
     dialogType: DialogType.success,
-    dialogBackgroundColor: AppColors.greenColor,
     title: S.of(context).success,
     desc: massage,
     btnOk: CustomButton(
