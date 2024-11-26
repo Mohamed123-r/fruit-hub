@@ -70,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "لا يوجد مستخدم بهذا البريد الإلكتروني."),
         "weak_password": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور المقدمة ضعيفة للغاية."),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا"),
         "with_conditions": MessageLookupByLibrary.simpleMessage("الخاصة بنا "),
         "wrong_password":
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير صحيحة.")
