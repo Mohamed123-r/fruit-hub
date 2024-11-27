@@ -35,4 +35,6 @@
   "wrong_password": "Wrong password provided for that user.",
   "welcome": "Welcome",
   "welcome_to_sign_in": "The account has been created successfully, please log in."
+  ,
+  "good_morning": "Good morning !.."
 }

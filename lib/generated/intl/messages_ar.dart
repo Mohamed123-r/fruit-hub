@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "generic_error": MessageLookupByLibrary.simpleMessage("خطأ"),
         "get_started": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
+        "good_morning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
         "have_account": MessageLookupByLibrary.simpleMessage(" تمتلك حساب؟ "),
         "log_in_text": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "log_in_with_apple":

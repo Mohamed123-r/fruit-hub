@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/generated/assets.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
 
@@ -18,7 +19,7 @@ class CustomHomeAppbar extends StatelessWidget {
         height: 44,
       ),
       title: Text(
-        'صباح الخير !..',
+      S.of(context).good_morning,
         style: TextStyles.bodyBasaRegular.copyWith(
           color: AppColors.grayscale400Color,
         ),
