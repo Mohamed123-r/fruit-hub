@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/widgets/custom_search_text_field.dart';
 
 import 'custom_home_appbar.dart';
+import 'over_item.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -12,6 +13,7 @@ class HomeViewBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: Column(
+            crossAxisAlignment:  CrossAxisAlignment.start,
             children: [
               CustomHomeAppbar(),
               SizedBox(
@@ -21,6 +23,7 @@ class HomeViewBody extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: CustomSearchTextField(),
               ),
+              OverItem(),
             ],
           ),
         )

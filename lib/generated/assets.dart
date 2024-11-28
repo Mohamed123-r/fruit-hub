@@ -15,6 +15,8 @@ class Assets {
   static const String imagesImagesCheck = 'assets/images/imagesCheck.svg';
   static const String imagesLogo = 'assets/images/Logo.svg';
   static const String imagesNotification = 'assets/images/notification.svg';
+  static const String imagesOverBackgroundImage = 'assets/images/OverBackgroundImage.png';
+  static const String imagesOverimagetest = 'assets/images/overimagetest.png';
   static const String imagesPageViewItem1BackgroundImage = 'assets/images/PageViewItem1BackgroundImage.svg';
   static const String imagesPageViewItem1Image = 'assets/images/PageViewItem1Image.svg';
   static const String imagesPageViewItem2BackgroundImage = 'assets/images/PageViewItem2BackgroundImage.svg';
