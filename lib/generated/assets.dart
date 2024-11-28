@@ -13,6 +13,7 @@ class Assets {
   static const String imagesFillter = 'assets/images/fillter.svg';
   static const String imagesGoogleIcon = 'assets/images/googleIcon.svg';
   static const String imagesImagesCheck = 'assets/images/imagesCheck.svg';
+  static const String imagesItemTest = 'assets/images/itemTest.png';
   static const String imagesLogo = 'assets/images/Logo.svg';
   static const String imagesNotification = 'assets/images/notification.svg';
   static const String imagesOverBackgroundImage = 'assets/images/OverBackgroundImage.png';
