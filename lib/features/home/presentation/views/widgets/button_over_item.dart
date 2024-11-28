@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class ButtonOverItem extends StatelessWidget {
   const ButtonOverItem({super.key});
@@ -15,10 +16,12 @@ class ButtonOverItem extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12.0),
-        child: Text('تسوق الان',
-            style: TextStyles.bodySmallBold.copyWith(
-                color: AppColors.greenColor
-            )),
+        child: Text(
+          S.of(context).shop_now,
+          style: TextStyles.bodySmallBold.copyWith(
+            color: AppColors.greenColor,
+          ),
+        ),
       ),
     );
   }

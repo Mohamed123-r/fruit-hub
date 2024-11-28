@@ -429,6 +429,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Holiday Offers`
+  String get holiday_offer {
+    return Intl.message(
+      'Holiday Offers',
+      name: 'holiday_offer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `25% Discount`
+  String get discount_25 {
+    return Intl.message(
+      '25% Discount',
+      name: 'discount_25',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shop Now`
+  String get shop_now {
+    return Intl.message(
+      'Shop Now',
+      name: 'shop_now',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

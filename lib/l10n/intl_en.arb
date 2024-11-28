@@ -36,5 +36,8 @@
   "welcome": "Welcome",
   "welcome_to_sign_in": "The account has been created successfully, please log in.",
   "good_morning": "Good morning !..",
-  "search_here": "Search for....."
+  "search_here": "Search for.....",
+  "holiday_offer": "Holiday Offers",
+  "discount_25": "25% Discount",
+  "shop_now": "Shop Now"
 }

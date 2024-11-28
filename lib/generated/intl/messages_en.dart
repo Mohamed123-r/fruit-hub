@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "create_new_account":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
+        "discount_25": MessageLookupByLibrary.simpleMessage("25% Discount"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "error_occurred": MessageLookupByLibrary.simpleMessage(
             "Oh no! An error occurred. Please try again."),
@@ -42,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Good morning !.."),
         "have_account":
             MessageLookupByLibrary.simpleMessage("Have an account? "),
+        "holiday_offer": MessageLookupByLibrary.simpleMessage("Holiday Offers"),
         "log_in_text": MessageLookupByLibrary.simpleMessage("Log In"),
         "log_in_with_apple":
             MessageLookupByLibrary.simpleMessage("Log in with Apple"),
@@ -68,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to "),
         "search_here": MessageLookupByLibrary.simpleMessage("Search for....."),
+        "shop_now": MessageLookupByLibrary.simpleMessage("Shop Now"),
         "sign_up": MessageLookupByLibrary.simpleMessage("New Account"),
         "success": MessageLookupByLibrary.simpleMessage("Success"),
         "terms": MessageLookupByLibrary.simpleMessage("Our "),

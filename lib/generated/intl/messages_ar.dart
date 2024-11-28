@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "create_new_account":
             MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "discount_25": MessageLookupByLibrary.simpleMessage("خصم 25%"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "error_occurred": MessageLookupByLibrary.simpleMessage(
             "عذرًا! حدث خطأ. يرجى المحاولة مرة أخرى."),
@@ -40,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "get_started": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "good_morning": MessageLookupByLibrary.simpleMessage("صباح الخير !.."),
         "have_account": MessageLookupByLibrary.simpleMessage(" تمتلك حساب؟ "),
+        "holiday_offer": MessageLookupByLibrary.simpleMessage("عروض العيد"),
         "log_in_text": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "log_in_with_apple":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
@@ -65,6 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على "),
         "search_here": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
+        "shop_now": MessageLookupByLibrary.simpleMessage("تسوق الان"),
         "sign_up": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "success": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
         "terms": MessageLookupByLibrary.simpleMessage("الشروط "),

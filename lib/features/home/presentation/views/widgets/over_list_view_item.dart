@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/helper_funcation/is_arabic.dart';
 
 import 'over_item.dart';
 
@@ -13,12 +14,14 @@ class OverListViewItem extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 5,
         itemBuilder: (context, index) => index == 0
-            ? const SizedBox(
+            ?  isArabic() ? const SizedBox(
                 width: 16,
+              ) : const SizedBox(
+                width: 8,
               )
             : index == 4
                 ? const SizedBox(
-                    width: 8,
+                    width: 16,
                   )
                 : OverItem(),
       ),
