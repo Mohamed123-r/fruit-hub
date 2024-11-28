@@ -67,6 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to "),
+        "search_here": MessageLookupByLibrary.simpleMessage("Search for....."),
         "sign_up": MessageLookupByLibrary.simpleMessage("New Account"),
         "success": MessageLookupByLibrary.simpleMessage("Success"),
         "terms": MessageLookupByLibrary.simpleMessage("Our "),

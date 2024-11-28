@@ -64,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "privacy_policy": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على "),
+        "search_here": MessageLookupByLibrary.simpleMessage("ابحث عن......."),
         "sign_up": MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "success": MessageLookupByLibrary.simpleMessage("تم بنجاح"),
         "terms": MessageLookupByLibrary.simpleMessage("الشروط "),

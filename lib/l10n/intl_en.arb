@@ -34,7 +34,7 @@
   "user_not_found": "No user found for that email.",
   "wrong_password": "Wrong password provided for that user.",
   "welcome": "Welcome",
-  "welcome_to_sign_in": "The account has been created successfully, please log in."
-  ,
-  "good_morning": "Good morning !.."
+  "welcome_to_sign_in": "The account has been created successfully, please log in.",
+  "good_morning": "Good morning !..",
+  "search_here": "Search for....."
 }
