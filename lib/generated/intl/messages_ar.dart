@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("يرجى قبول الشروط والأحكام"),
         "account_exists": MessageLookupByLibrary.simpleMessage(
             "الحساب موجود بالفعل لهذا البريد الإلكتروني."),
+        "best_selling_text":
+            MessageLookupByLibrary.simpleMessage("الاكثر مبيعا"),
         "conditions": MessageLookupByLibrary.simpleMessage(" والأحكام "),
         "create_account":
             MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
@@ -73,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "terms": MessageLookupByLibrary.simpleMessage("الشروط "),
         "user_not_found": MessageLookupByLibrary.simpleMessage(
             "لا يوجد مستخدم بهذا البريد الإلكتروني."),
+        "view_all_text": MessageLookupByLibrary.simpleMessage("المزيد"),
         "weak_password": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور المقدمة ضعيفة للغاية."),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبًا"),

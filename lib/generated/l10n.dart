@@ -459,6 +459,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Best Selling`
+  String get best_selling_text {
+    return Intl.message(
+      'Best Selling',
+      name: 'best_selling_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See all`
+  String get view_all_text {
+    return Intl.message(
+      'See all',
+      name: 'view_all_text',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

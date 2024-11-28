@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please accept terms and conditions"),
         "account_exists": MessageLookupByLibrary.simpleMessage(
             "The account already exists for that email."),
+        "best_selling_text":
+            MessageLookupByLibrary.simpleMessage("Best Selling"),
         "conditions": MessageLookupByLibrary.simpleMessage("Terms "),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create an account"),
@@ -76,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "terms": MessageLookupByLibrary.simpleMessage("Our "),
         "user_not_found": MessageLookupByLibrary.simpleMessage(
             "No user found for that email."),
+        "view_all_text": MessageLookupByLibrary.simpleMessage("See all"),
         "weak_password": MessageLookupByLibrary.simpleMessage(
             "The password provided is too weak."),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
