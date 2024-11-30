@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../generated/l10n.dart';
+import 'widgets/best_selling_view_body.dart';
 
 class BestSellingView extends StatelessWidget {
   const BestSellingView({super.key});
@@ -11,11 +12,10 @@ class BestSellingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(
-       context:  context,
+        context: context,
         title: S.of(context).best_selling_text,
       ),
+      body: BestSellingViewBody(),
     );
   }
-
-
 }
