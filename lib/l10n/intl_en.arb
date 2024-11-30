@@ -41,6 +41,10 @@
   "discount_25": "25% Discount",
   "shop_now": "Shop Now",
   "best_selling_text": "Best Selling",
-  "view_all_text": "See all"
+  "view_all_text": "See all",
+  "bottom_navigation_home": "Home",
+  "bottom_navigation_shopping_cart": "My Cart",
+  "bottom_navigation_products": "Products",
+  "bottom_navigation_user": "Account"
 
 }

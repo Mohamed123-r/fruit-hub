@@ -1,3 +1,5 @@
+import 'package:fruit_hub/generated/l10n.dart';
+
 import '../../../../generated/assets.dart';
 
 class BottomNavigationBarEntity {
@@ -15,22 +17,22 @@ class BottomNavigationBarEntity {
 
 List<BottomNavigationBarEntity> bottomNavigationBarItems = [
   BottomNavigationBarEntity(
-    name: "Home",
+    name: S.current.bottom_navigation_home,
     activeImageItem: Assets.imagesActiveHome,
     inActiveImageItem: Assets.imagesOutlineHome,
   ),
   BottomNavigationBarEntity(
-    name: "Cart",
-    activeImageItem: Assets.imagesActiveShopping,
-    inActiveImageItem: Assets.imagesOutlineShopping,
-  ),
-  BottomNavigationBarEntity(
-    name: "Profile",
+    name: S.current.bottom_navigation_products,
     activeImageItem: Assets.imagesActiveProduct,
     inActiveImageItem: Assets.imagesOutlineProdect,
   ),
   BottomNavigationBarEntity(
-    name: "حسابي",
+    name: S.current.bottom_navigation_shopping_cart,
+    activeImageItem: Assets.imagesActiveShopping,
+    inActiveImageItem: Assets.imagesOutlineShopping,
+  ),
+  BottomNavigationBarEntity(
+    name: S.current.bottom_navigation_user,
     activeImageItem: Assets.imagesActiveUser,
     inActiveImageItem: Assets.imagesOuitlineUser,
   ),

@@ -28,6 +28,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "الحساب موجود بالفعل لهذا البريد الإلكتروني."),
         "best_selling_text":
             MessageLookupByLibrary.simpleMessage("الاكثر مبيعا"),
+        "bottom_navigation_home":
+            MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "bottom_navigation_products":
+            MessageLookupByLibrary.simpleMessage("المنتجات"),
+        "bottom_navigation_shopping_cart":
+            MessageLookupByLibrary.simpleMessage("السلة"),
+        "bottom_navigation_user": MessageLookupByLibrary.simpleMessage("حسابي"),
         "conditions": MessageLookupByLibrary.simpleMessage(" والأحكام "),
         "create_account":
             MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),

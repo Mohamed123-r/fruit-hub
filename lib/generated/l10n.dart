@@ -479,6 +479,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Home`
+  String get bottom_navigation_home {
+    return Intl.message(
+      'Home',
+      name: 'bottom_navigation_home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My Cart`
+  String get bottom_navigation_shopping_cart {
+    return Intl.message(
+      'My Cart',
+      name: 'bottom_navigation_shopping_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products`
+  String get bottom_navigation_products {
+    return Intl.message(
+      'Products',
+      name: 'bottom_navigation_products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account`
+  String get bottom_navigation_user {
+    return Intl.message(
+      'Account',
+      name: 'bottom_navigation_user',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

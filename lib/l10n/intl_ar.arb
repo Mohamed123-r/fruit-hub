@@ -42,5 +42,9 @@
   "shop_now": "تسوق الان",
 
   "best_selling_text": "الاكثر مبيعا",
-  "view_all_text": "المزيد"
+  "view_all_text": "المزيد",
+  "bottom_navigation_home": "الرئيسية",
+  "bottom_navigation_shopping_cart": "السلة",
+  "bottom_navigation_products": "المنتجات",
+  "bottom_navigation_user": "حسابي"
 }

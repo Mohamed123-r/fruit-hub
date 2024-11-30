@@ -12,7 +12,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
 }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
-  int selectIndex = 3;
+  int selectIndex =  0;
 
   @override
   Widget build(BuildContext context) {

@@ -28,6 +28,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "The account already exists for that email."),
         "best_selling_text":
             MessageLookupByLibrary.simpleMessage("Best Selling"),
+        "bottom_navigation_home": MessageLookupByLibrary.simpleMessage("Home"),
+        "bottom_navigation_products":
+            MessageLookupByLibrary.simpleMessage("Products"),
+        "bottom_navigation_shopping_cart":
+            MessageLookupByLibrary.simpleMessage("My Cart"),
+        "bottom_navigation_user":
+            MessageLookupByLibrary.simpleMessage("Account"),
         "conditions": MessageLookupByLibrary.simpleMessage("Terms "),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create an account"),
