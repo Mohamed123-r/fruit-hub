@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/helper_funcation/get_it.dart';
-import 'package:fruit_hub/core/widgets/custom_app_bar.dart';
+import 'package:fruit_hub/core/widgets/custom_app_bar_auth.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import '../../domain/repos/auth_repo.dart';
 import '../manage/sign_in_cubit/sign_in_cubit.dart';
@@ -19,7 +19,7 @@ class LogInView extends StatelessWidget {
         getIt<AuthRepo>(),
       ),
       child: Scaffold(
-        appBar: buildAppBar(
+        appBar: buildAppBarAuth(
           context,
           title: S.of(context).log_in_text,
         ),
