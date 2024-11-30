@@ -27,7 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "account_exists": MessageLookupByLibrary.simpleMessage(
             "الحساب موجود بالفعل لهذا البريد الإلكتروني."),
         "best_selling_text":
-            MessageLookupByLibrary.simpleMessage("الاكثر مبيعا"),
+            MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "bottom_navigation_home":
             MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "bottom_navigation_products":

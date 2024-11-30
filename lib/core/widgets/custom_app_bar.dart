@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/utils/app_text_styles.dart';
 
-AppBar buildAppBar(BuildContext context, {required String title}) {
+import '../utils/app_text_styles.dart';
+import 'notification_widget.dart';
+
+AppBar buildAppBar({
+  required BuildContext context,
+  required String title,
+}) {
   return AppBar(
+    title: Text(title, style: TextStyles.bodyLargeBold),
+    centerTitle: true,
     backgroundColor: Colors.white,
     elevation: 0,
-    centerTitle: true,
-    title: Text(
-      title,
-      style: TextStyles.bodyLargeBold,
-    ),
     leading: IconButton(
-      icon: const Icon(
-        Icons.arrow_back_ios_new_outlined,
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: const Icon(
+          Icons.arrow_back_ios_new_outlined,
+          size: 18,
+        )),
+    actions: const [
+      Padding(
+        padding: EdgeInsets.only(right: 16.0, left: 16.0),
+        child: NotificationWidget(),
       ),
-      onPressed: () => Navigator.pop(context),
-    ),
+    ],
   );
 }

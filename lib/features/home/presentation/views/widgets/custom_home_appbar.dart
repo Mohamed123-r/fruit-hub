@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
+import 'package:fruit_hub/core/widgets/notification_widget.dart';
 import 'package:fruit_hub/generated/assets.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import '../../../../../core/utils/app_text_styles.dart';
@@ -28,13 +28,8 @@ class CustomHomeAppbar extends StatelessWidget {
         'أحمد مصطفي',
         style: TextStyles.bodyBasaBold,
       ),
-      trailing: CircleAvatar(
-        radius: 17,
-        backgroundColor: Color(0xffEEF8ED),
-        child: SvgPicture.asset(
-          Assets.imagesNotification,
-        ),
-      ),
+      trailing: NotificationWidget(),
     );
   }
 }
+
