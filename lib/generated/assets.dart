@@ -6,6 +6,10 @@ class Assets {
   static const String fontsCairoMedium = 'assets/fonts/Cairo-Medium.ttf';
   static const String fontsCairoRegular = 'assets/fonts/Cairo-Regular.ttf';
   static const String fontsCairoSemiBold = 'assets/fonts/Cairo-SemiBold.ttf';
+  static const String imagesActiveHome = 'assets/images/ActiveHome.svg';
+  static const String imagesActiveProduct = 'assets/images/ActiveProduct.svg';
+  static const String imagesActiveShopping = 'assets/images/ActiveShopping.svg';
+  static const String imagesActiveUser = 'assets/images/ActiveUser.svg';
   static const String imagesAppIcon = 'assets/images/app_icon.png';
   static const String imagesAppleIcon = 'assets/images/appleIcon.svg';
   static const String imagesCircles = 'assets/images/circles.svg';
@@ -16,6 +20,10 @@ class Assets {
   static const String imagesItemTest = 'assets/images/itemTest.png';
   static const String imagesLogo = 'assets/images/Logo.svg';
   static const String imagesNotification = 'assets/images/notification.svg';
+  static const String imagesOuitlineUser = 'assets/images/OuitlineUser.svg';
+  static const String imagesOutlineHome = 'assets/images/OutlineHome.svg';
+  static const String imagesOutlineProdect = 'assets/images/OutlineProdect.svg';
+  static const String imagesOutlineShopping = 'assets/images/OutlineShopping.svg';
   static const String imagesOverBackgroundImage = 'assets/images/OverBackgroundImage.png';
   static const String imagesOverimagetest = 'assets/images/overimagetest.png';
   static const String imagesPageViewItem1BackgroundImage = 'assets/images/PageViewItem1BackgroundImage.svg';
