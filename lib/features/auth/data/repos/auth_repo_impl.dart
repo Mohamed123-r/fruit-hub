@@ -157,9 +157,9 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future saveUserData({required UserEntity user}) async {
-    var jsonData = JsonEncoder(
+    var jsonData = jsonEncode(
       UserModel.fromEntity(user).toMap(),
     );
-    await CacheHelper().saveData(key: EndPoints.kSaveUserData, value: jsonData);
+    await CacheHelper.sharedPreferences.setString( EndPoints.kSaveUserData,  jsonData);
   }
 }
