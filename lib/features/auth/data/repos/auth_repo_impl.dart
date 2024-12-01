@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/constant.dart';
+import 'package:fruit_hub/core/database/cache_helper.dart';
 import 'package:fruit_hub/core/error/exception.dart';
 import 'package:fruit_hub/core/error/failures.dart';
 import 'package:fruit_hub/core/services/fire_store_service.dart';
@@ -58,6 +61,7 @@ class AuthRepoImpl extends AuthRepo {
         password: password,
       );
       var data = await getUserData(userId: user.uid);
+      saveUserData(user: data);
       return Right(data);
     } on CustomException catch (e) {
       return Left(
@@ -82,6 +86,7 @@ class AuthRepoImpl extends AuthRepo {
           uId: user.uid, email: user.email!, name: user.displayName!);
 
       await checkIfDocumentExists(user, userEntity);
+      saveUserData(user: userEntity);
       return Right(userEntity);
     } catch (e) {
       deleteUser(user);
@@ -102,6 +107,7 @@ class AuthRepoImpl extends AuthRepo {
       var userEntity = UserEntity(
           uId: user.uid, email: user.email!, name: user.displayName!);
       await checkIfDocumentExists(user, userEntity);
+      saveUserData(user: userEntity);
       return Right(UserModel.fromFirebaseUser(user));
     } catch (e) {
       deleteUser(user);
@@ -124,7 +130,7 @@ class AuthRepoImpl extends AuthRepo {
   Future addUserData({required UserEntity user, String? userId}) async {
     await fireStoreService.addData(
         path: EndPoints.userCollectionPath,
-        data: user.toMap(),
+        data: UserModel.fromEntity(user).toMap(),
         documentId: user.uId);
   }
 
@@ -147,5 +153,13 @@ class AuthRepoImpl extends AuthRepo {
     } else {
       await addUserData(user: userEntity);
     }
+  }
+
+  @override
+  Future saveUserData({required UserEntity user}) async {
+    var jsonData = JsonEncoder(
+      UserModel.fromEntity(user).toMap(),
+    );
+    await CacheHelper().saveData(key: EndPoints.kSaveUserData, value: jsonData);
   }
 }
