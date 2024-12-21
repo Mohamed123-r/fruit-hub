@@ -60,6 +60,26 @@ class ProductModel {
 
   toJson() => toMap();
 
+  toEntity() {
+    return ProductModel(
+      name: name,
+      description: description,
+      price: price,
+      urlImage: urlImage,
+      isFeatured: isFeatured,
+      code: code,
+      expirationMonths: expirationMonths,
+      numberOfCalories: numberOfCalories,
+      unitAmount: unitAmount,
+      aveRating: aveRating,
+      ratingCount: ratingCount,
+      isOrganic: isOrganic,
+      reviews: reviews,
+      bestSeller: bestSeller,
+      image: image,
+    );
+  }
+
   toMap() => {
         "name": name,
         "description": description,
