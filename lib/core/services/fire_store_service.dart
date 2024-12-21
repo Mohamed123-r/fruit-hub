@@ -23,7 +23,7 @@ class FireStoreService extends DatabaseService {
       return data.data() as Map<String, dynamic>;
     } else {
       var data = await fireStore.collection(path).get();
-      return data.docs.first.data();
+      return data.docs.map((e) => e.data()).toList();
     }
   }
 

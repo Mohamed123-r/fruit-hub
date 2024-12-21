@@ -16,7 +16,7 @@ class ProductRepoImpl implements ProductRepo {
     try {
       var data = await databaseService.getData(
         path: EndPoints.kAddProduct,
-      );
+      ) as List<Map<String, dynamic>>;
       List<ProductEntity> products;
       products = data
           .map(
