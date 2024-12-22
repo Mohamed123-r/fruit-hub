@@ -9,7 +9,7 @@ part 'product_state.dart';
 class ProductCubit extends Cubit<ProductState> {
   final ProductRepo productRepo;
 
-  ProductCubit(super.initialState, {required this.productRepo});
+  ProductCubit({required this.productRepo}) : super(ProductInitial());
 
   Future<void> getProducts() async {
     emit(ProductLoading());
