@@ -4,7 +4,7 @@ import 'package:fruit_hub/constant.dart';
 import 'package:fruit_hub/core/database/cache_helper.dart';
 import 'package:fruit_hub/core/helper_funcation/custom_error.dart';
 import 'package:fruit_hub/core/widgets/custom_progress_hud.dart';
-import 'package:fruit_hub/features/home/presentation/views/home_view.dart';
+import 'package:fruit_hub/features/main/presentation/views/main_view.dart';
 import '../../manage/sign_in_cubit/sign_in_cubit.dart';
 import 'sign_in_view_body.dart';
 
@@ -19,7 +19,7 @@ class SignInViewBodyBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is SignInSuccess) {
           Navigator.of(context)
-              .pushNamedAndRemoveUntil(HomeView.routeName, (route) => false);
+              .pushNamedAndRemoveUntil(MainView.routeName, (route) => false);
 
           CacheHelper().saveData(key: isSuccessLogin, value: true);
         }
