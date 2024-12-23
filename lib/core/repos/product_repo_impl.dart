@@ -15,7 +15,7 @@ class ProductRepoImpl implements ProductRepo {
   Future<Either<Failure, List<ProductEntity>>> getProducts() async {
     try {
       var data = await databaseService.getData(
-        path: EndPoints.kAddProduct,
+        path: EndPoints.kAddProductCollection,
       ) as List<Map<String, dynamic>>;
       List<ProductEntity> products;
       products = data
@@ -37,7 +37,7 @@ class ProductRepoImpl implements ProductRepo {
   Future<Either<Failure, List<ProductEntity>>> getBastSellersProduct() async {
     try {
       var data = await databaseService.getData(
-        path: EndPoints.kAddProduct,
+        path: EndPoints.kAddProductCollection,
         query: {
           "limit": 10,
           "orderBy": "bestSeller",
