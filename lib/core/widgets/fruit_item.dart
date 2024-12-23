@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/generated/assets.dart';
 
@@ -6,7 +7,9 @@ import '../helper_funcation/is_arabic.dart';
 import '../utils/app_colors.dart';
 
 class FruitItem extends StatelessWidget {
-  const FruitItem({super.key});
+  const FruitItem({super.key, required this.product});
+
+  final ProductEntity product;
 
   @override
   Widget build(BuildContext context) {
@@ -32,18 +35,18 @@ class FruitItem extends StatelessWidget {
                 ListTile(
                   contentPadding: const EdgeInsets.all(0),
                   title: Text(
-                    'فراولة',
+                    product.name,
                     style: TextStyles.bodySmallRegular,
                   ),
                   subtitle: Row(
                     children: [
                       Text(
-                        '30جنية ',
+                       "${product.price.toString()} جنيه",
                         style: TextStyles.bodySmallBold
                             .copyWith(color: AppColors.orangeColor),
                       ),
                       Text(
-                        '/ الكيلو',
+                          '/ الكيلو',
                         style: TextStyles.bodySmallRegular.copyWith(
                             color: AppColors.orangeColor.withOpacity(0.5)),
                       ),
