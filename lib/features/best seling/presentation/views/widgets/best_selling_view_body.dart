@@ -10,9 +10,10 @@ class BestSellingViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        GridViewItem(),
+        GridViewItem(
+          products: [],
+        ),
       ],
-
     );
   }
 }
