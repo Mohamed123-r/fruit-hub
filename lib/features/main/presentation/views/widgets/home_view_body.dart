@@ -7,6 +7,7 @@ import 'package:fruit_hub/core/widgets/grid_view_item.dart';
 import 'best_seling_header.dart';
 import 'custom_home_appbar.dart';
 import 'over_list_view_item.dart';
+import 'product_grid_view_item_bloc_builder.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({
@@ -48,7 +49,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
             ],
           ),
         ),
-        GridViewItem(),
+        ProductGridViewItemBlocBuilder(),
       ],
     );
   }
