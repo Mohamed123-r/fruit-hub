@@ -5,6 +5,8 @@ import 'package:fruit_hub/features/auth/data/repos/auth_repo_impl.dart';
 import 'package:fruit_hub/features/auth/domain/repos/auth_repo.dart';
 import 'package:get_it/get_it.dart';
 
+import '../repos/product_repo.dart';
+
 final getIt = GetIt.instance;
 
 void setupGetIt() {
@@ -14,7 +16,7 @@ void setupGetIt() {
     getIt<FirebaseAuthService>(),
     getIt<FireStoreService>(),
   ));
-  getIt.registerSingleton<AuthRepo>(ProductRepoImpl(
+  getIt.registerSingleton<ProductRepo>(ProductRepoImpl(
     databaseService: getIt<FireStoreService>(),
-  ) as AuthRepo);
+  ));
 }
