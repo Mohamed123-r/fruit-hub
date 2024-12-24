@@ -15,16 +15,17 @@ class GridViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(products.length);
-    print(products);
     return SliverGrid.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 163 / 214,
       ),
       itemCount: products.length,
-      itemBuilder: (context, index) => FruitItem(
-        product: products[index],
+      itemBuilder: (context, index) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: FruitItem(
+          product: products[index],
+        ),
       ),
     );
   }
