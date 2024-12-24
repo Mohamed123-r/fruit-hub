@@ -3,6 +3,7 @@ import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
 import 'package:fruit_hub/generated/assets.dart';
 
+import '../../constant.dart';
 import '../helper_funcation/is_arabic.dart';
 import '../utils/app_colors.dart';
 
@@ -13,6 +14,7 @@ class FruitItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    logger.w(product.image);
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -30,7 +32,11 @@ class FruitItem extends StatelessWidget {
             Column(
               children: [
                 const SizedBox(height: 12),
-                Image.asset(Assets.imagesItemTest),
+                Flexible(
+                  child: Image.network(
+                    product.image.path,
+                  ),
+                ),
                 const SizedBox(height: 12),
                 ListTile(
                   contentPadding: const EdgeInsets.all(0),
@@ -41,12 +47,12 @@ class FruitItem extends StatelessWidget {
                   subtitle: Row(
                     children: [
                       Text(
-                       "${product.price.toString()} جنيه",
+                        "${product.price.toString()} جنيه",
                         style: TextStyles.bodySmallBold
                             .copyWith(color: AppColors.orangeColor),
                       ),
                       Text(
-                          '/ الكيلو',
+                        '/ الكيلو',
                         style: TextStyles.bodySmallRegular.copyWith(
                             color: AppColors.orangeColor.withOpacity(0.5)),
                       ),
