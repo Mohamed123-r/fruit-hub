@@ -4,7 +4,7 @@ import 'package:fruit_hub/core/cubits/product_cubit/product_cubit.dart';
 import 'package:fruit_hub/core/helper_funcation/get_it.dart';
 import 'package:fruit_hub/core/repos/product_repo.dart';
 
-import 'home_view_body.dart';
+import 'widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
