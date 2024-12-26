@@ -14,7 +14,6 @@ class FruitItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    logger.w(product.image);
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
