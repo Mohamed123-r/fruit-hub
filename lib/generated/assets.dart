@@ -15,6 +15,7 @@ class Assets {
   static const String imagesCircles = 'assets/images/circles.svg';
   static const String imagesFacebookIcon = 'assets/images/facebookIcon.svg';
   static const String imagesFillter = 'assets/images/fillter.svg';
+  static const String imagesFillterTo = 'assets/images/fillter_to.svg';
   static const String imagesGoogleIcon = 'assets/images/googleIcon.svg';
   static const String imagesImagesCheck = 'assets/images/imagesCheck.svg';
   static const String imagesItemTest = 'assets/images/itemTest.png';
