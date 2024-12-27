@@ -3,6 +3,8 @@ import 'package:fruit_hub/core/widgets/custom_bottom_navigation_bar.dart';
 import 'package:fruit_hub/features/main/presentation/views/home_view.dart';
 import 'package:fruit_hub/features/main/presentation/views/product_view.dart';
 
+import 'cart_view.dart';
+
 class MainView extends StatefulWidget {
   const MainView({super.key});
 
@@ -32,6 +34,7 @@ class _MainViewState extends State<MainView> {
           children: [
             HomeView(),
             ProductView(),
+            CartView(),
           ],
         ),
       ),

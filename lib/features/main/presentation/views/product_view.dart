@@ -20,7 +20,7 @@ class ProductView extends StatelessWidget {
       child: Scaffold(
         appBar: buildAppBar(
           context: context,
-          showLeading: true,
+          showLeading: false,
           title: S.of(context).bottom_navigation_products,
         ),
         body: ProductViewBody(),

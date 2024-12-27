@@ -6,7 +6,8 @@ import 'notification_widget.dart';
 AppBar buildAppBar(
     {required BuildContext context,
     required String title,
-    bool showLeading = false}) {
+    bool showLeading = true,
+    bool showAction = true}) {
   return AppBar(
     title: Text(title, style: TextStyles.bodyLargeBold),
     centerTitle: true,
@@ -24,10 +25,13 @@ AppBar buildAppBar(
             size: 18,
           )),
     ),
-    actions: const [
-      Padding(
-        padding: EdgeInsets.only(right: 16.0, left: 16.0),
-        child: NotificationWidget(),
+    actions: [
+      Visibility(
+        visible: showAction,
+        child: Padding(
+          padding: EdgeInsets.only(right: 16.0, left: 16.0),
+          child: NotificationWidget(),
+        ),
       ),
     ],
   );
