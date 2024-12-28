@@ -34,5 +34,6 @@ class Assets {
   static const String imagesPlant = 'assets/images/Plant.svg';
   static const String imagesProfileImage = 'assets/images/profileImage.png';
   static const String imagesSearch = 'assets/images/search.svg';
+  static const String imagesTrash = 'assets/images/trash.svg';
 
 }
