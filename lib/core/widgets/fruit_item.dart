@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/app_text_styles.dart';
-import 'package:fruit_hub/generated/assets.dart';
-
-import '../../constant.dart';
+import 'package:fruit_hub/features/main/presentation/manage/cubits/cart_cubit/cart_cubit.dart';
 import '../helper_funcation/is_arabic.dart';
 import '../utils/app_colors.dart';
 
@@ -56,12 +55,17 @@ class FruitItem extends StatelessWidget {
                       ),
                     ],
                   ),
-                  trailing: CircleAvatar(
-                    radius: 17,
-                    backgroundColor: AppColors.greenColor,
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.white,
+                  trailing: GestureDetector(
+                    onTap: () {
+                      context.read<CartCubit>().addProduct(product);
+                    },
+                    child: CircleAvatar(
+                      radius: 17,
+                      backgroundColor: AppColors.greenColor,
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 )
