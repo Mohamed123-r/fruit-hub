@@ -35,7 +35,7 @@ class CartViewBody extends StatelessWidget {
                 height: 24,
               ),
             ),
-            CartItemsList(),
+            CartItemsList(cartListEntity: [],),
           ],
         ),
         Padding(
